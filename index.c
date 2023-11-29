@@ -30,23 +30,28 @@
 #define case
 #define break
 #define default
-#define for
-#define do
-#define while
-#define goto
-#define void
-#define return
+#define ᚱ for
+#define ᛋ do
+#define ᛞ while
+#define @ goto
+#define ᚼ void
+#define ⊂ return
 #define _Complex
 #define continue
-#define if
-#define else
-#define inline
-#define volatile
-#define //
+#define ⎕ if
+#define ⎕⎕ else
+#define ⍨ inline
+#define ⌿ volatile
+#define # //
 #define ∇ {
 #define ∆ }
-#define { (
-#define } )
+#define {## (
+#define ##} )
 #define ← =
+#define ᚬ !=
+#define ᚯ ==
+#define ᚮ +=
+#define ᚭ -=
+
 
 
