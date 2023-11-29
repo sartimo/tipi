@@ -15,7 +15,7 @@
 #define long long
 #define unsigned long long
 #define enum
-#define struct
+#define ⎔⎔ struct
 #define float
 #define double
 #define long double
