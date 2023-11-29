@@ -42,5 +42,4 @@
 #define inline
 #define volatile
 #define //
-#define /*
-#define */
+
