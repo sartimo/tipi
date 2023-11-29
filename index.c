@@ -1,6 +1,7 @@
 #define ɸ #define
 #define Ͽ #ifndef
 #define Ͼ #endif
+#define •Import #include
 #define _Bool
 #define char
 #define signed char
