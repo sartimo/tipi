@@ -1,4 +1,4 @@
-#define ɸ #define
+#define ⍝ #define
 #define Ͽ #ifndef
 #define Ͼ #endif
 #define •Import #include
@@ -43,4 +43,10 @@
 #define inline
 #define volatile
 #define //
+#define ∇ {
+#define ∆ }
+#define { (
+#define } )
+#define ← =
+
 
