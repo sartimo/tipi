@@ -25,6 +25,55 @@
 # define __attribute__(x)
 #endif
 
+// hydrogen preprocessor macros
+#define ⍝ #include
+#define → #define
+#define ?→ #ifndef
+#define !→ #endif
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+#define 
+
+
 typedef struct Type Type;
 typedef struct Node Node;
 typedef struct Member Member;
