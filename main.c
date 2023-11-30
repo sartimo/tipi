@@ -689,7 +689,7 @@ static FileType get_file_type(char *filename) {
     return FILE_DSO;
   if (endswith(filename, ".o"))
     return FILE_OBJ;
-  if (endswith(filename, ".c"))
+  if (endswith(filename, ".⎔"))
     return FILE_C;
   if (endswith(filename, ".s"))
     return FILE_ASM;
