@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Tipi
-  VERSION = '0.1.0alpha'
+  VERSION = '0.0.1'
 end

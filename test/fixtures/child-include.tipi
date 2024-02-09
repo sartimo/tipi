@@ -1,5 +1,0 @@
-first line of child
-
-include::grandchild-include.tipi[]
-
-last line of child

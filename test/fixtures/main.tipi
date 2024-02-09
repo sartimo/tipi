@@ -1,5 +1,0 @@
-= Main Document
-
-preamble
-
-include::chapter-a.tipi[leveloffset=+1]
