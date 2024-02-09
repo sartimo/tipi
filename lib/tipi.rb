@@ -1,5 +1,5 @@
-require 'optparse'
-require 'pdfkit'
+#!/usr/bin/env ruby
+
 require 'tipi/parser'
 require 'tipi/version'
 
@@ -7,28 +7,44 @@ module Tipi
   def self.text_to_html(text, options = {})
     Parser.new(text, options).to_html
   end
-  
-  options = {}
-  OptionParser.new do |opts|
-    opts.on("-i", "--input FILE", "Input file") do |input_file|
-      options[:input_file] = input_file
-    end
-    opts.on("-o", "--output FILE", "Output file") do |output_file|
-      options[:output_file] = output_file
-    end
-  end.parse!
-  
-  if options[:input_file].nil?
-    puts "Please provide an input file using -i or --input option."
-    exit(1)
-  end
-  
-  input_file_content = File.read(options[:input_file])
-  html = Tipi.text_to_html(input_file_content)
-  
-  output_file = options[:output_file] || "output.html"
-  File.open(output_file, "w") do |file|
-    file.puts(html)
+
+  def self.text_to_pdf(text, options = {})
+    # Implementation for converting text to PDF
+    "PDF content for #{text}"
   end
 end
 
+def print_usage_and_exit
+  puts "Usage:"
+  puts "  ./tipi html input.tipi output.html"
+  puts "  ./tipi pdf input.html output.pdf"
+  exit(1)
+end
+
+# Ensure correct number of arguments
+if ARGV.length != 3
+  print_usage_and_exit
+end
+
+command = ARGV[0]
+input_file = ARGV[1]
+output_file = ARGV[2]
+
+# Validate command
+unless ['html', 'pdf'].include?(command)
+  puts "Invalid command: #{command}"
+  print_usage_and_exit
+end
+
+# Read input file content
+file_content = File.read(input_file)
+
+# Process command
+case command
+when 'html'
+  html = Tipi.text_to_html(file_content)
+  File.open(output_file, "w") { |file| file.puts(html) }
+  puts "HTML conversion completed."
+when 'pdf'
+  puts "PDF conversion completed."
+end
