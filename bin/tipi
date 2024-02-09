@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/tipi'
+require 'wkhtmltopdf_runner'
 
 def print_usage_and_exit
   puts "Usage:"
@@ -34,5 +35,11 @@ when 'html'
   File.open(output_file, "w") { |file| file.puts(html) }
   puts "HTML conversion completed."
 when 'pdf'
+  pdf_output = WkhtmltopdfRunner.pdf_from_file(input_file)
+
+  doc = File.open(output_file, 'w')
+  doc.write(pdf_output)
+  doc.close
+
   puts "PDF conversion completed."
 end
