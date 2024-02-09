@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = s.name
 
   s.files         = `git ls-files`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.executables   = ['tipi']
   s.require_paths = %w(lib)
 
   s.homepage = 'http://github.com/sartimo/tipi'
