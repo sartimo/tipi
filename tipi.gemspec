@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/lib/tipi/version'
 require 'date'
 
 Gem::Specification.new do |s|
-  s.name = 'tipi'
+  s.name = 'tipi-markup'
   s.version = Tipi::VERSION
   s.date = Date.today.to_s
 
