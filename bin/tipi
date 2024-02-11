@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+tipi = File.absolute_path '../lib/tipi.rb', __dir__
+if File.exist? tipi
+  require tipi
+  require File.join Tipi::LIB_DIR, 'tipi/cli'
+else
+  require 'tipi'
+  require 'tipi/cli'
+end
+
+invoker = Tipi::Cli::Invoker.new ARGV
+GC.start
+invoker.invoke!
+exit invoker.code

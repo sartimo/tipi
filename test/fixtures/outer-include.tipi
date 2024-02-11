@@ -1,0 +1,5 @@
+first line of outer
+
+include::subdir/middle-include.tipi[]
+
+last line of outer
