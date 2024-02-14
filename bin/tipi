@@ -6,7 +6,7 @@ require 'wkhtmltopdf_runner'
 def print_usage_and_exit
   puts "Usage:"
   puts "  ./tipi html input.tipi output.html"
-  puts "  ./tipi pdf input.html output.pdf"
+  puts "  ./tipi pdf input.tipi output.pdf"
   exit(1)
 end
 
@@ -35,7 +35,13 @@ when 'html'
   File.open(output_file, "w") { |file| file.puts(html) }
   puts "HTML conversion completed."
 when 'pdf'
-  file_path = input_file
+  # Read input file content
+  file_content = File.read(input_file)
+
+  html = Tipi.text_to_html(file_content)
+  File.open('temp.html', "w") { |file| file.puts(html) }
+
+  file_path = 'temp.html'
   
   # Open the file in read mode
   File.open(file_path, "r") do |file|
@@ -51,6 +57,7 @@ when 'pdf'
       doc.write(pdf_file.read)
       doc.close
     end
+    File.delete('temp.html')
   end
   puts "PDF conversion completed."
 end
