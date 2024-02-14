@@ -9,4 +9,4 @@ $ bundle install tipi-0.0.1.gem
 
 == Installing from .DEB
 
-$ curl 
+$ curl https://github.com/sartimo/tipi/releases/download/0.0.1/tipi_0.0.1_all.deb && dpkg -i tipi_0.0.1_all.deb
