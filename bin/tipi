@@ -35,5 +35,22 @@ when 'html'
   File.open(output_file, "w") { |file| file.puts(html) }
   puts "HTML conversion completed."
 when 'pdf'
+  file_path = input_file
+  
+  # Open the file in read mode
+  File.open(file_path, "r") do |file|
+    # Read the content of the file and store it in a variable
+    file_content = file.read
+    puts(file_content)
+    # Output the content of the file
+  
+    string = file_content
+  
+    WkhtmltopdfRunner.pdf_from_string(string) do |pdf_file|
+      doc = File.open(output_file, 'w')
+      doc.write(pdf_file.read)
+      doc.close
+    end
+  end
   puts "PDF conversion completed."
 end
