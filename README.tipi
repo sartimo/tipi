@@ -1,1 +1,7 @@
 = Tipi
+
+== Installation
+
+$ bundle install
+$ bundle exec gem build tipi.gemspec
+$ bundle install tipi-0.0.1.gem
